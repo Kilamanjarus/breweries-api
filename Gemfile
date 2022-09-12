@@ -11,7 +11,7 @@ gem "pg", "~> 1.1"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
-gem 'csv'
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
@@ -48,3 +48,4 @@ end
 
 gem 'http'
 gem 'csv'
+gem 'geocoder'
