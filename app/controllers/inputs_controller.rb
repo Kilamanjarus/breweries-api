@@ -1,5 +1,13 @@
 class InputsController < ApplicationController
+  require "csv"
+
   def index
-    render json: { message: "heelo from index", message2: "hello from Ali" }
+    breweries = []
+    CSV.foreach(("breweries_us.csv"), headers: true, col_sep: ",") do |row|
+
+      # p row[0]
+      breweries << { row[0] => row[2] }
+    end
+    render json: breweries.as_json
   end
 end
